@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  php:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    # Add this line
+    user: "1000:1000" # Use your host user's UID:GID
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: myapp
+      MYSQL_USER: myuser
+      MYSQL_PASSWORD: mypassword
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
