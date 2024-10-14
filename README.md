@@ -19,6 +19,7 @@ This is a simple PHP-based Task Manager application that allows users to create,
 
 ## Project Structure
 
+```
 .
 ├── src/
 │ ├── add_task.php
@@ -32,6 +33,7 @@ This is a simple PHP-based Task Manager application that allows users to create,
 ├── docker-compose.yml
 ├── Dockerfile
 └── README.md
+```
 
 ## Setup and Installation
 
@@ -74,11 +76,3 @@ The project uses Docker volumes, so any changes made to the PHP files in the `sr
 ## Security Note
 
 This application is for demonstration purposes only and is not production-ready. It lacks proper security measures such as input validation, prepared statements for database queries, and CSRF protection. Do not use it in a production environment without implementing these security features.
-
-## License
-
-[Add your chosen license here]
-
-## Contributing
-
-[Add contribution guidelines if applicable]
